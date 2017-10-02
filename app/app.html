@@ -1,0 +1,38 @@
+<div class="bb-city-summary-container" ng-class="{ active: !$ctrl.isForecastActive }">
+  <bb-city-summary ng-repeat="city in $ctrl.cities" ng-click="$ctrl.getForecast(city)" city="{{ city }}"
+    has-loaded="hasLoaded" ng-class="{ 'bb-loaded': hasLoaded }"></bb-city-summary>
+</div>
+
+<div class="bb-city-forecast-container" ng-class="{ active: $ctrl.isForecastActive }">
+  <div class="bb-city-forecast">
+    <div class="bb-city-forecast-close-button" ng-click="$ctrl.closeForecast()">
+      &times;
+    </div>
+
+    <div class="bb-city-forecast-header">
+      <div class="bb-city-forecast-header-name">
+        {{ $ctrl.forecast.city }}
+      </div>
+
+      <div class="bb-city-forecast-header-label">
+        Temperature forecast for 12:00 PM
+      </div>
+    </div>
+
+    <ul class="bb-city-forecasts-days">
+      <li class="bb-city-forecast-day" ng-repeat="day in $ctrl.forecast.temperatures">
+        <div class="bb-city-forecast-day-label">
+          {{ day.date.format('dddd') }}
+        </div>
+
+        <div class="bb-city-forecast-day-temperature">
+          {{ day.temperature | temperature }}
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="bb-toggle-button" ng-click="$ctrl.toggleUnits()">
+  Use {{ $ctrl.units.useMetric ? 'imperial' : 'metric' }} units
+</div>

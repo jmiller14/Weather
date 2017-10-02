@@ -1,4 +1,4 @@
-# Frontend Developer Exercise 2.4
+# Frontend Developer Exercise 2.3
 
 ## Introduction
 The purpose of this exercise is for the developer to exhibit his familiarity with frontend technologies, programming patterns and to provide with a sample of what clean and reusable code means to the candidate.
@@ -28,7 +28,7 @@ More details here http://openweathermap.org/current
 It is possible to find more information here http://openweathermap.org/api
 
 ## UI/UX
-In Backbase we take pride that we have created a lean portal, with focus on UX. Your UI should reflect the same principles. Try creating something simple, user friendly and eye appealing. Feel free to use any UI resources you’d like to achieve that. For example you could use Twitter Bootstrap, or any other UI library.
+We take pride that we have created a lean portal, with focus on UX. Your UI should reflect the same principles. Try creating something simple, user friendly and eye appealing. Feel free to use any UI resources you’d like to achieve that. For example you could use Twitter Bootstrap, or any other UI library.
 
 ## Architecture
 Here there is no limitation. Design your application anyway you want. Focus on clean, reusable code. Focus on frontend best practices. Show us that you know how to produce high quality modern web applications.

@@ -1,0 +1,27 @@
+<div class="bb-city-summary" ng-class="{ 'bb-loaded': $ctrl.hasLoaded }">
+  <div class="bb-city-summary-badge-container">
+    <div class="bb-city-summary-icon-container">
+      <i ng-if="$ctrl.data" class="bb-city-summary-icon owf owf-{{ $ctrl.data.code }}"></i>
+    </div>
+
+    <div class="bb-city-summary-badge-label" title="{{ $ctrl.data.description }}">
+      {{ $ctrl.data ? $ctrl.data.description : '-' }}
+    </div>
+  </div>
+
+  <div class="bb-city-summary-data-container">
+    <div class="bb-city-summary-name">
+      {{ $ctrl.data ? $ctrl.data.name : '-' }}
+    </div>
+
+    <div class="bb-city-summary-info">
+      {{ $ctrl.data.conditions }}
+      &middot;
+      {{ $ctrl.data.temperature | temperature }}
+      &middot;
+      {{ $ctrl.data.windSpeed | windSpeed }}
+      {{ $ctrl.data.windDirection | direction }}
+      <span class="bb-wind-icon" ng-style="{ transform: 'rotate(' + (+$ctrl.data.windDirection - 90) + 'deg)' }"></span>
+    </div>
+  </div>
+</div>
